@@ -6067,6 +6067,12 @@ public final class Settings {
          */
         public static final String ADVANCED_REBOOT = "advanced_reboot";
 
+	/**
+         * Current status of whether gestures are locked
+         * @hide
+         */
+        public static final String LOCK_GESTURE_STATUS = "lock_gesture_status";
+
         /**
          * Keys we no longer back up under the current schema, but want to continue to
          * process when restoring historical backup datasets.
