@@ -44,6 +44,7 @@ public class PropImitationHooks {
     private static final boolean DEBUG = false;
 
     private static final String PACKAGE_AIWALLPAPERS = "com.google.android.apps.aiwallpapers";
+    private static final String PACKAGE_AICORE = "com.google.android.aicore";
     private static final String PACKAGE_ARCORE = "com.google.ar.core";
     private static final String PACKAGE_ASSISTANT = "com.google.android.apps.googleassistant";
     private static final String PACKAGE_ASI = "com.google.android.as";
@@ -139,6 +140,7 @@ public class PropImitationHooks {
             dlog("Setting stock fingerprint for: " + packageName);
             setPropValue("FINGERPRINT", sStockFp);
         } else if (sSpoofGapps && (packageName.equals(PACKAGE_VELVET)
+		|| packageName.equals(PACKAGE_AICORE)
 		|| packageName.equals(PACKAGE_TURBO)
                 || packageName.equals(PACKAGE_ASI)
 		|| packageName.equals(PACKAGE_GBOARD)
