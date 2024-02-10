@@ -68,7 +68,13 @@ public class PropImitationHooks {
     private static final String PACKAGE_NETFLIX = "com.netflix.mediaclient";
     private static final String PACKAGE_VELVET = "com.google.android.googlequicksearchbox";
 
+    private static final String PROCESS_GMS_GAPPS = PACKAGE_GMS + ".gapps";
+    private static final String PROCESS_GMS_GSERVICE = PACKAGE_GMS + ".gservice";
+    private static final String PROCESS_GMS_LEARNING = PACKAGE_GMS + ".learning";
     private static final String PROCESS_GMS_PERSISTENT = PACKAGE_GMS + ".persistent";
+
+    private static final String PROCESS_GMS_SEARCH = PACKAGE_GMS + ".search";
+    private static final String PROCESS_GMS_UI = PACKAGE_GMS + ".ui";
     private static final String PROCESS_GMS_UNSTABLE = PACKAGE_GMS + ".unstable";
 
     private static final String PROP_SECURITY_PATCH = "persist.sys.pihooks.security_patch";
@@ -158,7 +164,12 @@ public class PropImitationHooks {
 		|| packageName.equals(PACKAGE_WALLPAPEREFFECTS)
 		|| packageName.equals(PACKAGE_WEATHER)
                 || (packageName.equals(PACKAGE_GMS)
-		&& processName.equals(PROCESS_GMS_PERSISTENT)))) {
+		&& processName.equals(PROCESS_GMS_PERSISTENT)
+		|| processName.equals(PROCESS_GMS_UI)
+		|| processName.equals(PROCESS_GMS_SEARCH)
+		|| processName.equals(PROCESS_GMS_GAPPS)
+		|| processName.equals(PROCESS_GMS_GSERVICE)
+		|| processName.equals(PROCESS_GMS_LEARNING)))) {
             if (sIsTablet) {
                 dlog("Spoofing Pixel Tablet for: " + packageName + " process: " + processName);
                 sPixelTabletProps.forEach(PropImitationHooks::setPropValue);
