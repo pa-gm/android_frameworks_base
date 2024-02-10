@@ -56,6 +56,7 @@ public class PropImitationHooks {
     private static final String PACKAGE_GMS = "com.google.android.gms";
     private static final String PACKAGE_LIVEWALLPAPER = "com.google.pixel.livewallpaper";
 
+    private static final String PACKAGE_WEATHER = "com.google.android.apps.weather";
     private static final String PACKAGE_PIXELTHEMES = "com.google.android.apps.customization.pixel";
     private static final String PACKAGE_PIXELWALLPAPER = "com.google.android.apps.wallpaper.pixel";
     private static final String PACKAGE_TURBO = "com.google.android.apps.turbo";
@@ -155,6 +156,7 @@ public class PropImitationHooks {
 		|| packageName.equals(PACKAGE_PIXELWALLPAPER)
 		|| packageName.equals(PACKAGE_WALLPAPER)
 		|| packageName.equals(PACKAGE_WALLPAPEREFFECTS)
+		|| packageName.equals(PACKAGE_WEATHER)
                 || (packageName.equals(PACKAGE_GMS)
 		&& processName.equals(PROCESS_GMS_PERSISTENT)))) {
             if (sIsTablet) {
