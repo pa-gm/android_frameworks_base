@@ -84,8 +84,8 @@ public class PropImitationHooks {
         "MANUFACTURER", "Google",
         "BRAND", "google",
         "MODEL", "Pixel 8 Pro",
-        "ID", "UQ1A.231205.015",
-        "FINGERPRINT", "google/husky/husky:14/UQ1A.231205.015/11084887:user/release-keys"
+        "ID", "UQ1A.240205.004",
+        "FINGERPRINT", "google/husky/husky:14/UQ1A.240205.004/11269751:user/release-keys"
     );
 
     private static final Map<String, String> sPixelTabletProps = Map.of(
@@ -95,8 +95,8 @@ public class PropImitationHooks {
         "MANUFACTURER", "Google",
         "BRAND", "google",
         "MODEL", "Pixel Tablet",
-        "ID", "UQ1A.231205.015",
-        "FINGERPRINT", "google/tangorpro/tangorpro:14/UQ1A.231205.015/11084887:user/release-keys"
+        "ID", "UQ1A.240205.002",
+        "FINGERPRINT", "google/tangorpro/tangorpro:14/UQ1A.240205.002/11224170:user/release-keys"
     );
 
     private static volatile String[] sCertifiedProps;
