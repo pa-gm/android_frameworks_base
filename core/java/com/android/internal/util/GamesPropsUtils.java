@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2023 The Android Open Source Project
+ * Copyright (C) 2024 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -64,6 +64,11 @@ public class GamesPropsUtils {
                 "com.tencent.tmgp.sgame"
         });
 
+        propsToChange.put("NX729J", createNX729JProps());
+        packagesToChange.put("NX729J", new String[]{
+                "com.YoStar.AetherGazer"
+        });
+
         propsToChange.put("OP8P", createOP8PProps());
         packagesToChange.put("OP8P", new String[]{
                 "com.netease.lztgglobal",
@@ -82,7 +87,8 @@ public class GamesPropsUtils {
         packagesToChange.put("OP9P", new String[]{
                 "com.epicgames.fortnite",
                 "com.epicgames.portal",
-                "com.tencent.lolm"
+                "com.tencent.lolm",
+                "jp.konami.pesam"
         });
 
         propsToChange.put("ROG3", createROG3Props());
@@ -95,6 +101,7 @@ public class GamesPropsUtils {
         propsToChange.put("ROG6", createROG6Props());
         packagesToChange.put("ROG6", new String[]{
                 "com.activision.callofduty.shooter",
+                "com.gameloft.android.ANMP.GloftA9HM",
                 "com.madfingergames.legends",
                 "com.riotgames.league.teamfighttactics",
                 "com.riotgames.league.teamfighttacticstw",
@@ -149,9 +156,19 @@ public class GamesPropsUtils {
         return props;
     }
 
+    private static Map<String, Object> createNX729JProps() {
+        Map<String, Object> props = new HashMap<>();
+        props.put("BRAND", "nubia");
+        props.put("DEVICE", "NX729J");
+        props.put("MANUFACTURER", "nubia");
+        props.put("MODEL", "NX729J");
+        return props;
+    }
+
     private static Map<String, Object> createOP8PProps() {
         Map<String, Object> props = new HashMap<>();
         props.put("BRAND", "OnePlus");
+        props.put("DEVICE", "OnePlus8Pro");
         props.put("MANUFACTURER", "OnePlus");
         props.put("MODEL", "IN2020");
         return props;
@@ -160,6 +177,7 @@ public class GamesPropsUtils {
     private static Map<String, Object> createOP9PProps() {
         Map<String, Object> props = new HashMap<>();
         props.put("BRAND", "OnePlus");
+        props.put("DEVICE", "OnePlus9Pro");
         props.put("MANUFACTURER", "OnePlus");
         props.put("MODEL", "LE2101");
         return props;
